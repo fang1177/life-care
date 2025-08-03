@@ -1,0 +1,56 @@
+services:
+  # Backend API Service (serves both API and static files)
+  - type: web
+    name: hospital-management-backend
+    env: node
+    nodeVersion: 18
+    buildCommand: |
+      echo "=== Starting build process ==="
+      echo "Node version: $(node --version)"
+      echo "NPM version: $(npm --version)"
+      
+      echo "Installing root dependencies..."
+      npm install
+      
+      echo "Installing backend dependencies..."
+      cd backend && npm install
+      
+      echo "Installing frontend dependencies..."
+      cd ../frontend && npm install
+      
+      echo "Building frontend..."
+      ./node_modules/.bin/vite build || npx vite build || npm run build
+      
+      echo "Installing dashboard dependencies..."
+      cd ../dashboard && npm install
+      
+      echo "Building dashboard..."
+      ./node_modules/.bin/vite build || npx vite build || npm run build
+      
+      echo "=== Build completed successfully! ==="
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET_KEY
+        sync: false
+      - key: JWT_EXPIRES
+        value: 7d
+      - key: COOKIE_EXPIRE
+        value: 7
+      - key: CLOUDINARY_CLOUD_NAME
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_SECRET
+        sync: false
+      - key: FRONTEND_URL_ONE
+        value: https://lifecare-hospital-management-system.onrender.com
+      - key: FRONTEND_URL_TWO
+        value: https://lifecare-hospital-management-system.onrender.com/dashboard
+    autoDeploy: true
+    pullRequestPreviewsEnabled: true 

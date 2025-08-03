@@ -1,0 +1,41 @@
+{
+  "name": "lifecare-hospital-management-system",
+  "version": "1.0.0",
+  "description": "LifeCare Hospital Management System - A comprehensive MERN stack application for managing hospital operations, appointments, and patient care.",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chifuy117/MediNexa_Hospital-manegment-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chifuy117/MediNexa_Hospital-manegment-system/issues"
+  },
+  "homepage": "https://github.com/chifuy117/MediNexa_Hospital-manegment-system#readme",
+  "scripts": {
+    "install:all": "npm install && cd frontend && npm install && cd ../dashboard && npm install",
+    "build": "npm run build:backend && npm run build:frontend && npm run build:dashboard",
+    "build:backend": "cd backend && npm install",
+    "build:frontend": "cd frontend && npm install && npm run build",
+    "build:dashboard": "cd dashboard && npm install && npm run build",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:dashboard": "cd dashboard && npm run dev",
+    "dev:all": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\" \"npm run dev:dashboard\"",
+    "start": "cd backend && npm start",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm run preview",
+    "start:dashboard": "cd dashboard && npm run preview"
+  },
+  "keywords": [
+    "hospital",
+    "management",
+    "system",
+    "react",
+    "nodejs",
+    "express",
+    "mongodb",
+    "lifecare"
+  ],
+  "author": "",
+  "license": "ISC"
+}

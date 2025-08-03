@@ -1,0 +1,14 @@
+warning: in the working copy of 'dashboard/src/App.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'dashboard/src/components/Dashboard.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'dashboard/src/components/Login.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'dashboard/src/components/Sidebar.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/src/components/Navbar.jsx', LF will be replaced by CRLF the next time Git touches it
+backend/render.yaml
+dashboard/src/App.jsx
+dashboard/src/components/Dashboard.jsx
+dashboard/src/components/Login.jsx
+dashboard/src/components/LoginChoice.jsx
+dashboard/src/components/Sidebar.jsx
+dashboard/src/config/api.js
+frontend/src/components/Navbar.jsx
+frontend/src/config/api.js

@@ -1,0 +1,5 @@
+[33mb5f4eaa[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Clean up render.yaml: remove mixed lines and ensure clean build command
+[33md65e368[m Fix vite build: use explicit paths and fallback methods
+[33ma07702d[m Fix vite build issue: use npx and add dependency checking
+[33mebf3dd5[m Improve build process: add version logging and better error handling
+[33mf6d70a7[m Fix MongoDB SSL connection: simplify connection string and remove problematic SSL options
